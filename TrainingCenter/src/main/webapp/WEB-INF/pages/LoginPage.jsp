@@ -1,8 +1,6 @@
-
-<%@taglib uri="http://www.springframework.org/tags/form" prefix="fm"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    
+ 
 <!DOCTYPE html>
 
 <html lang="en" dir="ltr">
@@ -16,16 +14,16 @@
   <body>
 
 	<div class="box">
-		<form autocomplete="off">
-		<fm:form method="POST" action=""${contextPath}/AllPage" >
+		<!--<fm:form autocomplete="off">-->
+		<form method="POST" action=""${contextPath}/AllPage">
 			<h2>Sign in</h2>
 			<div class="inputBox">
-				<fm:input type="text" name="userName" required="required"/>
+				<input type="text" name="userName" required="required"/>
 				<span>student Id</span>
 				<i></i>
 			</div>
 			<div class="inputBox">
-				<fm:input type="password"  name="password" required="required"/>
+				<input type="password"  name="password" required="required"/>
 				<span>Password</span>
 				<i></i>
 			</div>
@@ -33,8 +31,8 @@
 				<a href="#">Forgot Password ?</a>
 				<a href="signup">Signup</a>
 			</div>
-			<fm:input type="submit" value="Login" name="login"/>
-		</fm:form>
+			<input type="submit" value="Login" name="login"/>
+		</form>
 	</div>
 
 </body>
