@@ -14,7 +14,7 @@ public class SecurityController {
 	@RequestMapping( "/")
 
 	public String alluser() {
-		return "AllPage";
+		return "LoginPage";
 	}
 
 	
