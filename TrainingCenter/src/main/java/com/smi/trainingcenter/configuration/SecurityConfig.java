@@ -22,28 +22,20 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	protected void configure(AuthenticationManagerBuilder auth)throws Exception{
 	auth.userDetailsService(userDetailsService);
 	}
-	
-	public void configure(HttpSecurity htt)throws Exception{
-		htt.authorizeRequests()
-		.antMatchers("/admin").hasRole("ADMIN")
-		.antMatchers("/user").hasAnyRole("ADMIN","USER")
-		//.antMatchers("/").permitAll()
-		.and().formLogin()
-		.loginPage("/LoginPage");
-//		.defaultSuccessUrl("/UserPage")  
-//	      .and()  
-//	      .logout()  
-//	      .logoutRequestMatcher(new AntPathRequestMatcher("/logout"));
-		//htt.csrf().disable();
-//        .authorizeRequests().antMatchers(HttpMethod.OPTIONS,"*/").permitAll()
-//        .antMatchers(HttpMethod.GET,"/LoginPage").permitAll();
 
-//		.permitAll()
-//		.and()
-//		.logout()
-//		.permitAll().logoutUrl("/user");
-//	
-	}
+	
+	 @Override
+		protected void configure(HttpSecurity http) throws Exception {
+			http.authorizeRequests()
+			
+		            .antMatchers("/admin").hasAnyRole("USER", "ADMIN")
+		            .antMatchers("/user").hasAnyRole("USER")
+		            .antMatchers("/").permitAll()
+					.and().formLogin().loginPage("/login").permitAll()
+					.and().logout().permitAll();
+
+			http.csrf().disable();
+		}
 			
 	
 	@Bean

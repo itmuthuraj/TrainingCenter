@@ -1,31 +1,33 @@
-
-<%@taglib uri="http://www.springframework.org/tags/form" prefix="fm"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<c:set var="contextPath" value=""/>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    
+
 <!DOCTYPE html>
 
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8">
     <title>Login</title>
-   <link href="${pageContext.request.contextPath}/style/LoginStyle.css" rel="stylesheet">  
+   <link href="style/LoginStyle.css" rel="stylesheet">  
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
    </head>
   <body>
 
 	<div class="box">
-		<form autocomplete="off">
-		<fm:form method="POST" action=""${contextPath}/AllPage" >
+		
+		<form method="POST" action="/login" >
 			<h2>Sign in</h2>
 			<div class="inputBox">
-				<fm:input type="text" name="userName" required="required"/>
+				<input type="text" name="username" required="required"/>
 				<span>student Id</span>
 				<i></i>
 			</div>
 			<div class="inputBox">
-				<fm:input type="password"  name="password" required="required"/>
+				<input type="password"  name="password" required="required"/>
 				<span>Password</span>
 				<i></i>
 			</div>
@@ -33,12 +35,9 @@
 				<a href="#">Forgot Password ?</a>
 				<a href="signup">Signup</a>
 			</div>
-			<fm:input type="submit" value="Login" name="login"/>
-		</fm:form>
+			<input type="submit" value="Login" name="login"class="btn btn-block btn-primary"/>
+		</form>
 	</div>
 
 </body>
 </html>
-
-
-
