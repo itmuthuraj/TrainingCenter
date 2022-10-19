@@ -37,6 +37,10 @@ public class SecurityController {
 	public String stafftakeattendance() {
 		return "stafftakeattendance";
 	}
+	@RequestMapping("/index")
+	public String index() {
+		return "index";
+	}
 
 	@RequestMapping("/staffviewcomplaint")
 	public String staffviewcomplaint() {
