@@ -20,6 +20,13 @@ public class SecurityController {
 	public String checkUser() {
 		return "UserPage";
 	}
+	
+	
+	@GetMapping("/admin")
+	public String checkAdmin() {
+		return "AllPage";
+	}
+
 
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String login(Model model, String error, String logout) {

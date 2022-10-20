@@ -23,7 +23,9 @@ top: 13px;
 
 
 <body>
-<form action="" method="post">
+
+	<form action="/add" method="post"modelAttribute ="courseList">
+
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 <section class="h-100 bg-dark">
@@ -33,6 +35,13 @@ top: 13px;
         <div class="card card-registration my-4">
           <div class="row g-0">
             <div class="col-xl-6 d-none d-xl-block">
+            
+            
+            
+            
+            
+            
+            
               <img src="Image/reg.jpg" alt="" class="img-fluid"
                 style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem;" />
             </div>
@@ -49,7 +58,7 @@ top: 13px;
                   </div>
                   <div class="col-md-8 mb-4">
                     <div class="form-outline">
-                  <input type="text" id="form3Example1n1" class="form-control form-control-lg" name="pName" />
+                  <input type="text" id="form3Example1n1" class="form-control form-control-lg" name="courseName" />
                       
                     </div>
                   </div>
@@ -66,7 +75,7 @@ top: 13px;
                   <div class="col-md-8 mb-4">
                     <div class="form-outline">
                   
-                  <input type="text" id="form3Example1n1" class="form-control form-control-lg" name="pDate" />
+                  <input type="text" id="form3Example1n1" class="form-control form-control-lg" name="courseDescription" />
                       
                     </div>
                   </div>
@@ -82,7 +91,7 @@ top: 13px;
                   <div class="col-md-8 mb-4">
                     <div class="form-outline">
                   
-                  <input type="text" id="form3Example1n1" class="form-control form-control-lg" name="pAge" />
+                  <input type="text" id="form3Example1n1" class="form-control form-control-lg" name="fees" />
                       
                     </div>
                   </div>
