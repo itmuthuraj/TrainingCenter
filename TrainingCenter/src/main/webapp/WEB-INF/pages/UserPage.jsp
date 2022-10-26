@@ -7,6 +7,7 @@
 <title>User Page</title>
 </head>
 <body>
-<h1>Only for User Page in Trainging Center</h1>
+<h1>hai  ${sess }</h1>
+<h1>Only for User Page in Training Center</h1>
 </body>
 </html>

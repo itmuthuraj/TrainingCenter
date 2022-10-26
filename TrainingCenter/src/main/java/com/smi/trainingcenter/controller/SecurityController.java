@@ -1,5 +1,9 @@
 package com.smi.trainingcenter.controller;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
+import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,20 +17,22 @@ public class SecurityController {
 
 	@RequestMapping("/")
 	public String alluser() {
-		return "CourseReg";
+		return "index";
 	}
 
 	@GetMapping("/user")
-	public String checkUser() {
-		return "UserPage";
+	public String checkUser(HttpServletRequest request, Authentication authentication) {
+		HttpSession session = request.getSession();
+
+		session.setAttribute("sess", authentication.getName());
+
+		return "CourseView";
 	}
-	
-	
+
 	@GetMapping("/admin")
 	public String checkAdmin() {
 		return "AllPage";
 	}
-
 
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String login(Model model, String error, String logout) {
@@ -44,6 +50,7 @@ public class SecurityController {
 	public String stafftakeattendance() {
 		return "stafftakeattendance";
 	}
+
 	@RequestMapping("/index")
 	public String index() {
 		return "index";

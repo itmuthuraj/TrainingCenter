@@ -23,7 +23,7 @@
 			<h2>Sign in</h2>
 			<div class="inputBox">
 				<input type="text" name="username" required="required"/>
-				<span>student Id</span>
+				<span>User Name</span>
 				<i></i>
 			</div>
 			<div class="inputBox">
